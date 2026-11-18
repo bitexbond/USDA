@@ -304,6 +304,25 @@ async function main() {
     ok(stale.length === 0, `${f} 未残留占位或回退域名`, stale.slice(0, 3).join(', '));
   }
 
+  // 改名回归：旧品牌/代币/旧域名不得残留在任何产物里（HTML、manifest、llms.txt、CSS、SVG）
+  async function walkDist(dir) {
+    const out = [];
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      const p = path.join(dir, entry.name);
+      if (entry.isDirectory()) out.push(...(await walkDist(p)));
+      else out.push(p);
+    }
+    return out;
+  }
+  const textExt = /\.(html|txt|xml|json|webmanifest|css|svg|js)$/;
+  const legacyPattern = /USDBOND|USDB\b|usdb\.bitex\.bond/;
+  const stale = [];
+  for (const file of await walkDist(DIST)) {
+    if (!textExt.test(file)) continue;
+    if (legacyPattern.test(await read(file, 'utf8'))) stale.push(path.relative(DIST, file));
+  }
+  ok(stale.length === 0, '产物中无旧品牌 USDBOND/USDB 或旧域名残留', stale.slice(0, 5).join(', '));
+
   if (site.incubator) {
     const llms = await read(path.join(DIST, 'llms.txt'));
     ok(llms.includes(site.incubator.name), 'llms.txt 声明了孵化方');

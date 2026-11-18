@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * USDBOND 静态站构建脚本。
+ * Stable Assets 静态站构建脚本。
  *
  *   node build.mjs              # 生成 dist/
  *   SITE_URL=https://x.com node build.mjs
@@ -211,7 +211,7 @@ function jsonLdFor({ locale, slug, fm, faqs, title, description, updated, pageUr
 
   const graph = [
     // 孵化方作为独立实体建节点，用 parentOrganization 关联而不是把 BitEX 的
-    // 信息塞进 USDBOND 节点 —— 这样两个实体在知识图谱里各自可被消歧，
+    // 信息塞进 Stable Assets 节点 —— 这样两个实体在知识图谱里各自可被消歧，
     // 且"孵化"不会被误读为"运营方"。
     ...(inc
       ? [
@@ -394,10 +394,11 @@ function llmsTxt(entries) {
 
 > ${site.description.en}
 
-USDBOND (USDB) is a registered investment company share under the Investment Company Act of 1940,
+Stable Assets (USDA) is a registered investment company share under the Investment Company Act of 1940,
 pegged at a constant $1.00 NAV under SEC Rule 2a-7, that airdrops US Treasury yield to eligible
-whitelisted holders every day of the year, including weekends and holidays. USDB is a security,
-not a payment stablecoin. Issuer revenue comes from a management fee (e.g. 0.15% p.a.) rather than
+whitelisted holders every day of the year, including weekends and holidays. USDA is a security,
+not a payment stablecoin. Naming: Stable Assets Protocol (protocol), Stable Bond (yield share
+product line), USDA (fund-share token). Issuer revenue comes from a management fee (e.g. 0.15% p.a.) rather than
 from reserve spread.
 
 Key figures: constant NAV $1.00 · airdrop 365 days/year · net yield ~3.35% (3.5% Treasury yield less
@@ -407,8 +408,8 @@ ${
   inc
     ? `
 Incubated by ${inc.name} (${inc.url}), operated by ${inc.legalName}. The incubation relationship is
-separate from the issuer of the USDBOND fund and does not constitute issuance, redemption, a
-guarantee, an endorsement, or investment advice in respect of USDB.`
+separate from the issuer of the Stable Assets fund and does not constitute issuance, redemption, a
+guarantee, an endorsement, or investment advice in respect of USDA.`
     : ''
 }
 

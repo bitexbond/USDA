@@ -1,12 +1,12 @@
 name: Deploy to GitHub Pages
 
 # GitHub Pages 走 artifact 部署，所以 dist/ 不需要提交 —— 这里现场构建。
-# 每次发布前会先跑完整自检（网关分流测试 + 1179 项产物断言），
+# 每次发布前会先跑完整自检（网关分流测试 + 产物断言），
 # 元数据或结构化数据坏了会直接挡住发布，而不是静默上线一个坏站点。
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:

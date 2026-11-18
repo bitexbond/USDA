@@ -183,7 +183,7 @@ async function main() {
       ok(!!orgNode, `${tag} @graph 含 Organization`);
 
       // 孵化关系必须是"两个独立实体 + parentOrganization 关联"，
-      // 不能把孵化方的账号挂到 USDBOND 节点上冒充自建渠道
+      // 不能把孵化方的账号挂到 Stable Assets 节点上冒充自建渠道
       if (site.incubator) {
         const incNode = graph.find((n) => n['@id'] === `${site.siteUrl}/#incubator`);
         if (ok(!!incNode, `${tag} @graph 含孵化方独立实体`)) {
@@ -193,10 +193,10 @@ async function main() {
         }
         ok(
           orgNode?.parentOrganization?.['@id'] === `${site.siteUrl}/#incubator`,
-          `${tag} USDBOND 通过 parentOrganization 关联孵化方`,
+          `${tag} Stable Assets 通过 parentOrganization 关联孵化方`,
         );
-        // USDBOND 尚无自建渠道，不应冒用孵化方账号
-        ok(!orgNode?.sameAs || orgNode.sameAs.length === 0, `${tag} USDBOND 未冒用孵化方社交账号`);
+        // Stable Assets 尚无自建渠道，不应冒用孵化方账号
+        ok(!orgNode?.sameAs || orgNode.sameAs.length === 0, `${tag} Stable Assets 未冒用孵化方社交账号`);
       }
     }
 

@@ -20,7 +20,7 @@ concurrency:
 
 env:
   # 权威域名。改这里即可整体切换，无需改 site.config.mjs
-  SITE_URL: https://usdb.bitex.bond
+  SITE_URL: https://usda.bitex.bond
 
 jobs:
   build:

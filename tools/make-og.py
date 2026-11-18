@@ -175,9 +175,9 @@ def make(page):
 
     # 品牌字标
     wf = font(24, bold=True)
-    d.text((pad + mark_size + 18, mark_y + 6), "USDBOND", font=wf, fill=FG)
+    d.text((pad + mark_size + 18, mark_y + 6), "Stable Assets", font=wf, fill=FG)
     sf = font(14, bold=False)
-    d.text((pad + mark_size + 18, mark_y + 36), "USDB · ON-CHAIN STABLE EQUITY", font=sf, fill=FG_MUTED)
+    d.text((pad + mark_size + 18, mark_y + 36), "USDA · ON-CHAIN TREASURY YIELD", font=sf, fill=FG_MUTED)
 
     # 语言角标
     badge = "中文" if page["locale"] == "zh" and CJK_OK else page["locale"].upper()
@@ -225,24 +225,24 @@ def make(page):
 
 PAGES = {
     "index": {
-        "zh": ("USDBOND · USDB", "链上稳定股票", "$1.00 恒定 NAV · 全年 365 天每日空投美国国债收益"),
-        "en": ("USDBOND · USDB", "On-Chain Stable Equity", "$1.00 constant NAV · Treasury yield airdropped 365 days a year"),
+        "zh": ("Stable Assets · USDA", "链上国债收益份额", "$1.00 恒定 NAV · 全年 365 天每日空投美国国债收益"),
+        "en": ("Stable Assets · USDA", "On-Chain Treasury Yield Shares", "$1.00 constant NAV · Treasury yield airdropped 365 days a year"),
     },
     "whitepaper": {
-        "zh": ("白皮书 · 版本 1.2", "USDBOND 白皮书", "1940 Act 注册份额 · Rule 2a-7 · 每日空投 · 合规与风险"),
-        "en": ("WHITEPAPER · VERSION 1.2", "The USDBOND Whitepaper", "1940 Act shares · Rule 2a-7 · daily airdrop · compliance · risks"),
+        "zh": ("白皮书 · 版本 1.3", "Stable Assets 白皮书", "1940 Act 注册份额 · Rule 2a-7 · Stable Bond · 每日空投"),
+        "en": ("WHITEPAPER · VERSION 1.3", "The Stable Assets Whitepaper", "1940 Act shares · Rule 2a-7 · Stable Bond · daily airdrop"),
     },
     "yield": {
         "zh": ("收益机制", "全年 365 天每日空投国债收益", "无需质押 · 无需锁定 · 无需主动领取"),
         "en": ("YIELD MECHANICS", "Treasury Yield, Every Single Day", "No staking · no lock-up · no manual claiming"),
     },
     "comparison": {
-        "zh": ("商业对比", "USDB vs USDT vs USDC", "国债利息归发行方，还是归持有人？"),
-        "en": ("COMPARISON", "USDB vs USDT vs USDC", "Who keeps the Treasury interest — the issuer, or you?"),
+        "zh": ("商业对比", "USDA vs USDT vs USDC", "国债利息归发行方，还是归持有人？"),
+        "en": ("COMPARISON", "USDA vs USDT vs USDC", "Who keeps the Treasury interest — the issuer, or you?"),
     },
     "compliance": {
-        "zh": ("合规架构", "USDB 为什么不是支付稳定币", "1940 Act 注册份额 · KYC/AML 白名单 · 转让限制"),
-        "en": ("COMPLIANCE", "Why USDB Is Not a Payment Stablecoin", "1940 Act shares · KYC/AML whitelisting · transfer restrictions"),
+        "zh": ("合规架构", "USDA 为什么不是支付稳定币", "1940 Act 注册份额 · KYC/AML 白名单 · 转让限制"),
+        "en": ("COMPLIANCE", "Why USDA Is Not a Payment Stablecoin", "1940 Act shares · KYC/AML whitelisting · transfer restrictions"),
     },
     "risks": {
         "zh": ("风险因素", "可能出什么问题", "监管定性 · 流动性错配 · $1 锚定局限 · 智能合约 · 税务"),
@@ -260,7 +260,7 @@ def main():
     if not CJK_OK:
         print("⚠  未找到中文字体，中文 OG 图会退化为英文排版")
 
-    host = os.environ.get("SITE_URL", "https://usdb.bitex.bond").replace("https://", "").replace("http://", "").rstrip("/")
+    host = os.environ.get("SITE_URL", "https://usda.bitex.bond").replace("https://", "").replace("http://", "").rstrip("/")
     footer = f"Incubated by BitEX  ·  {host}"
 
     n = 0

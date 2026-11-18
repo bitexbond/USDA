@@ -1,27 +1,29 @@
 /**
- * USDBOND 站点配置 —— 构建期的唯一事实来源。
+ * Stable Assets 站点配置 —— 构建期的唯一事实来源。
  *
  * 域名的权威值来自 SITE_URL 环境变量，其次是本文件的 siteUrl：
  *
- *   SITE_URL=https://usdb.bitex.bond npm run build
+ *   SITE_URL=https://usda.bitex.bond npm run build
  */
 export const site = {
   // 站点根 URL，末尾不带斜杠。可用 SITE_URL 环境变量覆盖。
-  siteUrl: (process.env.SITE_URL || 'https://usdb.bitex.bond').replace(/\/+$/, ''),
+  siteUrl: (process.env.SITE_URL || 'https://usda.bitex.bond').replace(/\/+$/, ''),
 
   // 站点名与代币标识
-  name: 'USDBOND',
-  token: 'USDB',
-  legalName: 'USDBOND Government Money Market Fund',
+  name: 'Stable Assets',
+  protocol: 'Stable Assets Protocol',
+  productLine: 'Stable Bond',
+  token: 'USDA',
+  legalName: 'Stable Assets Government Money Market Fund',
 
   // 品牌副标题
   tagline: {
-    zh: '链上稳定股票',
-    en: 'The On-Chain Stable Equity',
+    zh: '链上国债收益份额',
+    en: 'On-Chain Treasury Yield Shares',
   },
 
   /**
-   * 孵化方。USDBOND 以 BitEX 孵化项目的名义发布。
+   * 孵化方。Stable Assets 以 BitEX 孵化项目的名义发布。
    * 事实以 bitex.bond 官网为准；改这里会同步影响页头页脚、结构化数据与 llms.txt。
    */
   incubator: {
@@ -43,13 +45,13 @@ export const site = {
 
   // 站点级描述，用于 Organization / WebSite 结构化数据
   description: {
-    zh: 'USDBOND（USDB）是 1940 年《投资公司法》下的注册投资公司份额，每枚锚定 $1.00，全年 365 天每日空投美国国债收益。由 BitEX 孵化。',
-    en: 'USDBOND (USDB) is a registered investment company share under the Investment Company Act of 1940, pegged at $1.00, with daily US Treasury yield airdropped 365 days a year. Incubated by BitEX.',
+    zh: 'Stable Assets（USDA）是 1940 年《投资公司法》下的注册投资公司份额，以短期美国国债为底层资产，每枚锚定 $1.00，全年 365 天每日空投国债收益。由 BitEX 孵化。',
+    en: 'Stable Assets (USDA) is a registered investment company share under the Investment Company Act of 1940, backed by short-term US Treasuries, pegged at $1.00, with daily Treasury yield airdropped 365 days a year. Incubated by BitEX.',
   },
 
-  // 对外联络：USDBOND 尚无独立公开渠道，因此留空。
+  // 对外联络：Stable Assets 尚无独立公开渠道，因此留空。
   // BitEX 的 X/GitHub 属于孵化方本身，写在 incubator.sameAs 上 ——
-  // 挂到 USDBOND 的 sameAs 会让知识图谱把两个实体混为一谈。
+  // 挂到 Stable Assets 的 sameAs 会让知识图谱把两个实体混为一谈。
   email: '',
   sameAs: [],
 
@@ -58,7 +60,7 @@ export const site = {
   locales: ['zh', 'en'],
 
   // 内容更新日期，页面未单独声明 updated 时使用
-  defaultUpdated: '2026-10-09',
+  defaultUpdated: '2026-11-18',
 };
 
 /** 页面清单：slug 同时决定文件路径与 URL。 */
@@ -99,10 +101,10 @@ export const ui = {
     keyFacts: '关键事实',
     // 孵化关系声明。与上面的法律免责声明分开呈现：前者是事实陈述，后者是法律声明
     incubatorNote:
-      'USDBOND 以 BitEX 孵化项目的名义发布。BitEX 由 Hong Kong BitExchange Company Limited 运营，与 USDBOND 基金的发行主体相互独立；孵化关系不构成对 USDB 的发行、赎回、担保、背书或投资建议。',
+      'Stable Assets 以 BitEX 孵化项目的名义发布。BitEX 由 Hong Kong BitExchange Company Limited 运营，与 Stable Assets 基金的发行主体相互独立；孵化关系不构成对 USDA 的发行、赎回、担保、背书或投资建议。',
     disclaimer:
-      'USDBOND 白皮书仅供参考，不构成证券发行要约、要约邀请或投资建议。USDB 份额属于证券，其发行与销售受适用证券法律法规约束，仅面向完成 KYC/AML 验证的合格投资者。潜在投资者在作出投资决策前应阅读完整发行文件并咨询专业顾问。投资涉及风险，包括可能损失全部本金。',
-    copyright: 'USDBOND。保留所有权利。',
+      'Stable Assets 白皮书仅供参考，不构成证券发行要约、要约邀请或投资建议。USDA 份额属于证券，其发行与销售受适用证券法律法规约束，仅面向完成 KYC/AML 验证的合格投资者。潜在投资者在作出投资决策前应阅读完整发行文件并咨询专业顾问。投资涉及风险，包括可能损失全部本金。',
+    copyright: 'Stable Assets。保留所有权利。',
     ctaWhitepaper: '阅读白皮书',
     ctaFaq: '查看常见问题',
     tocToggle: '展开目录',
@@ -121,10 +123,10 @@ export const ui = {
     keyFacts: 'Key facts',
     // 孵化关系声明。与上面的法律免责声明分开呈现：前者是事实陈述，后者是法律声明
     incubatorNote:
-      'USDBOND is published as a BitEX-incubated project. BitEX is operated by Hong Kong BitExchange Company Limited, which is independent of the issuer of the USDBOND fund. The incubation relationship does not constitute issuance, redemption, a guarantee, an endorsement, or investment advice in respect of USDB.',
+      'Stable Assets is published as a BitEX-incubated project. BitEX is operated by Hong Kong BitExchange Company Limited, which is independent of the issuer of the Stable Assets fund. The incubation relationship does not constitute issuance, redemption, a guarantee, an endorsement, or investment advice in respect of USDA.',
     disclaimer:
-      'This whitepaper is provided for informational purposes only and does not constitute an offer to sell, a solicitation of an offer to buy, or investment advice. USDB shares are securities; their offer and sale are subject to applicable securities laws and are available only to eligible investors who have completed KYC/AML verification. Prospective investors should read the full offering documents and consult a professional adviser before making any investment decision. Investing involves risk, including possible loss of principal.',
-    copyright: 'USDBOND. All rights reserved.',
+      'This whitepaper is provided for informational purposes only and does not constitute an offer to sell, a solicitation of an offer to buy, or investment advice. USDA shares are securities; their offer and sale are subject to applicable securities laws and are available only to eligible investors who have completed KYC/AML verification. Prospective investors should read the full offering documents and consult a professional adviser before making any investment decision. Investing involves risk, including possible loss of principal.',
+    copyright: 'Stable Assets. All rights reserved.',
     ctaWhitepaper: 'Read the whitepaper',
     ctaFaq: 'View FAQ',
     tocToggle: 'Expand table of contents',

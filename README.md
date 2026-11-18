@@ -1,7 +1,7 @@
-# USDBOND 官网
+# Stable Assets 官网
 
-USDBOND（USDB）的双语静态站点，含 SEO 与 GEO（生成式引擎优化）实现。
-以 **BitEX 孵化项目**的名义发布，线上地址 **https://usdb.bitex.bond**。
+Stable Assets（USDA）的双语静态站点，含 SEO 与 GEO（生成式引擎优化）实现。
+以 **BitEX 孵化项目**的名义发布，线上地址 **https://usda.bitex.bond**。
 
 内容源是仓库里的两份中文文档（白皮书、商业模型对比），拆成 7 个页面并译成英文，
 由构建脚本生成纯静态 HTML。产物没有任何运行时框架、没有外部字体请求、没有客户端渲染。
@@ -15,7 +15,7 @@ npm run serve      # 本地预览 http://127.0.0.1:4173
 npm run check      # 网关测试 + 构建 + 产物自检（1332 项断言）
 ```
 
-域名由 `site.config.mjs` 的 `siteUrl` 决定，默认已是 `https://usdb.bitex.bond`。
+域名由 `site.config.mjs` 的 `siteUrl` 决定，默认已是 `https://usda.bitex.bond`。
 临时切换（例如预发环境）用环境变量，不必改文件：
 
 ```bash
@@ -54,7 +54,7 @@ h1: ...                  # 页面 H1
 lead: ...                # 导语，写成"结论先行"的一句话
 nav: 首页                # 导航与面包屑标签
 order: 1
-updated: 2026-10-09      # 输出到 <time>、sitemap lastmod、dateModified
+updated: 2026-11-18      # 输出到 <time>、sitemap lastmod、dateModified
 schema: WebPage          # WebPage | Article | FAQPage
 keywords: [a, b, c]
 heroStats:               # 可选，首页数据卡
@@ -72,9 +72,9 @@ heroStats:               # 可选，首页数据卡
 用 `### Q: 问题？` 起一条问答，正文写到下一个 `##` 或 `###` 为止：
 
 ```markdown
-### Q: USDBOND 是什么？
+### Q: Stable Assets 是什么？
 
-USDBOND（代币代码 USDB）是一种链上稳定股票……
+Stable Assets（代币代码 USDA）是一种链上国债收益份额（1940 Act 注册基金份额，恒定 $1.00 NAV，每日空投国债收益）……
 ```
 
 构建脚本会把这套写法**同时**用于两处：渲染页面正文，以及生成 `FAQPage`
@@ -118,7 +118,7 @@ USDBOND（代币代码 USDB）是一种链上稳定股票……
 | 结构化数据 | `@graph` 含 Organization、WebSite、InvestmentFund 实体、页面节点、BreadcrumbList、FAQPage |
 | FAQPage | 102 条问答来自正文本身，不是另写的副本 |
 | 结论先行 | 每节首句直接给结论与数字，便于被摘录 |
-| 实体显式化 | 关键句始终写"USDBOND (USDB)"而非代词，强化实体消歧 |
+| 实体显式化 | 关键句始终写"Stable Assets (USDA)"而非代词，强化实体消歧 |
 | AI 爬虫放行 | robots.txt 显式允许 GPTBot、ClaudeBot、PerplexityBot 等 20 个 UA |
 | 可引用的原子事实 | 关键数字集中成表格与"关键事实"块 |
 
@@ -147,7 +147,7 @@ USDBOND（代币代码 USDB）是一种链上稳定股票……
 
 分流规则的测试在 `test/gateway.test.mjs`，15 条用例覆盖优先级顺序与各种回退。
 
-## 部署到 usdb.bitex.bond
+## 部署到 usda.bitex.bond
 
 托管方式：**GitHub Pages（源站）+ Cloudflare（DNS 与 CDN 代理）**，与 bitex.bond 一致。
 `dist/` 不提交，由 GitHub Actions 现场构建后发布，发布前自动跑完整自检。
@@ -166,7 +166,7 @@ USDBOND（代币代码 USDB）是一种链上稳定股票……
 
    | 类型 | 名称 | 内容 | 代理状态 |
    | - | - | - | - |
-   | CNAME | `usdb` | `<你的org>.github.io` | 先 **DNS only（灰云）** |
+   | CNAME | `usda` | `<你的org>.github.io` | 先 **DNS only（灰云）** |
 
    先在灰云状态等 GitHub 签发好 Let's Encrypt 证书、Pages 显示 "DNS check successful"，
    再切回 **Proxied（橙云）**。顺序反了证书签发容易卡住。
@@ -224,8 +224,8 @@ npm run check
 站点以 BitEX 孵化项目的名义发布。措辞与实体建模都集中在 `site.config.mjs` 的
 `incubator` 块，改一处即同步到页头孵化条、页脚声明、结构化数据与 `llms.txt`。
 
-结构化数据里 BitEX 与 USDBOND 是**两个独立的 Organization 节点**，通过
-`parentOrganization` 关联。这样处理而不是把 BitEX 的账号挂到 USDBOND 名下，
+结构化数据里 BitEX 与 Stable Assets 是**两个独立的 Organization 节点**，通过
+`parentOrganization` 关联。这样处理而不是把 BitEX 的账号挂到 Stable Assets 名下，
 是为了让两个实体在 AI 知识图谱里各自可被消歧 —— "孵化"不会被读成"运营或背书"。
 
 页脚另有一段独立声明，划清孵化关系与发行主体的界限。措辞涉及证券法下的

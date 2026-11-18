@@ -138,3 +138,36 @@ CNAME 与 siteUrl 主机名一致、无旧域名残留、孵化关系可见性�
 - 语言网关的第三方 IP 查询（ipapi.co / ipwho.is）涉及把访客 IP 发给第三方。
   橙云状态下同源 `/cdn-cgi/trace` 会命中，第三方根本不会被调用；
   若未来迁到非 Cloudflare 托管且面向欧盟用户，考虑关掉它，见 README。
+
+---
+
+## 第三轮（2026-11-18）：白皮书 v1.3 改名 → Stable Assets / USDA，域名迁到 usda.bitex.bond
+
+### 改了什么
+
+- **品牌**：`site.config.mjs` 的 `name` 由 USDBOND 改为 **Stable Assets**，`token` 由 USDB
+  改为 **USDA**，`legalName` 改为 **Stable Assets Government Money Market Fund**；新增
+  `protocol: 'Stable Assets Protocol'` 与 `productLine: 'Stable Bond'`。
+- **定位**：`tagline` 由"链上稳定股票 / The On-Chain Stable Equity"改为
+  **"链上国债收益份额 / On-Chain Treasury Yield Shares"**，与 v1.3 白皮书的命名架构一致。
+- **域名**：`siteUrl`、`public/CNAME`、`.github/workflows/deploy.yml` 的 `SITE_URL` 全部
+  改为 **https://usda.bitex.bond**。
+- **内容**：14 个页面（2 语言 × 7 页）全文改名；白皮书页新增「二、命名架构」并重排
+  后续章节编号（法律架构→三 … 结论→十，子节 2.x→3.x …，中英同步）；首页补了
+  三层命名的解释；版本号 1.2 → 1.3，日期 2026-10-09 → 2026-11-18。
+- **OG 图**：`tools/make-og.py` 的标题/副标题/域名同步更新，14 张全部重新生成。
+- **其他**：`package.json` 名称与描述、`serve.mjs` 预览横幅、`test/selfcheck.mjs` 的
+  断言文案、`feature` 里 localStorage 键保持 `usdbond:*`（避免清掉用户语言偏好）。
+
+### 验证
+
+`npm run check`：构建 14 页 / 102 条问答，**1332 项断言全部通过**（含 usda 域名、
+hreflang 配对、结构化数据、OG 与 sitemap）。正文中已无 `USDBOND`/`USDB` 残留
+（`content/`、`src/`、`site.config.mjs` 均为 0）。
+
+### 还需要你做
+
+1. **Cloudflare**：新增 `usda` CNAME → `<org>.github.io`（先灰云，证书签好再切橙云）。
+2. **GitHub Pages**：Custom domain 改成 `usda.bitex.bond`（会重新签证书）。
+3. 旧的 `usdb.bitex.bond` 若要保留，建议加 301 跳转到新域名（Cloudflare Redirect Rule）。
+4. **法务复核**：v1.3 仍是证券相关内容，命名与"Stable Bond"表述上线前需业务方确认。

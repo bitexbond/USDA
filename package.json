@@ -1,9 +1,9 @@
 {
-  "name": "usdbond-site",
+  "name": "stable-assets-site",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "USDBOND (USDB) bilingual static site with SEO/GEO optimization",
+  "description": "Stable Assets (USDA) bilingual static site with SEO/GEO optimization",
   "scripts": {
     "build": "node build.mjs",
     "serve": "node serve.mjs",

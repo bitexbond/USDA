@@ -1,23 +1,23 @@
 ---
 slug: risks
-title: USDBOND Risk Factors — Regulatory, Liquidity and Peg Limits
-description: Full risk disclosure for USDBOND covering possible recharacterization as a payment stablecoin, tokenized fund liquidity mismatch, and smart contract risk.
+title: Stable Assets Risk Factors — Regulatory, Liquidity and Peg Limits
+description: Full risk disclosure for Stable Assets covering possible recharacterization as a payment stablecoin, tokenized fund liquidity mismatch, and smart contract risk.
 h1: Risk Factors
-lead: Investing in USDB involves risk, including the possible loss of all principal. The principal risks are regulatory characterization risk, liquidity mismatch risk, the limits of the $1.00 peg, smart contract risk, airdrop execution risk, and tax risk. $1.00 is a NAV commitment at redemption, not a price guarantee in the secondary market.
+lead: Investing in USDA involves risk, including the possible loss of all principal. The principal risks are regulatory characterization risk, liquidity mismatch risk, the limits of the $1.00 peg, smart contract risk, airdrop execution risk, and tax risk. $1.00 is a NAV commitment at redemption, not a price guarantee in the secondary market.
 nav: Risks
 order: 6
-updated: 2026-10-09
+updated: 2026-11-18
 schema: Article
-keywords: [USDBOND risks, stablecoin regulatory risk, tokenized fund liquidity mismatch, money market fund loss, smart contract risk, GENIUS Act risk]
+keywords: [Stable Assets risks, stablecoin regulatory risk, tokenized fund liquidity mismatch, money market fund loss, smart contract risk, GENIUS Act risk]
 ---
 
 > **Risk statement**: Investing involves risk, including the possible loss of all principal. SEC filings state explicitly: "It is possible to lose money by investing in a money market fund that seeks to maintain a stable share price." The risks listed on this page are not exhaustive; prospective investors should read the complete offering documents and consult professional advisers.
 
 ## Regulatory Characterization Risk
 
-**If regulators characterize USDBOND as a "payment stablecoin" rather than a security, the GENIUS Act's yield prohibition would apply directly and the airdrop mechanism could be prohibited.**
+**If regulators characterize Stable Assets as a "payment stablecoin" rather than a security, the GENIUS Act's yield prohibition would apply directly and the airdrop mechanism could be prohibited.**
 
-The OCC implementation proposal adopts a broad reading of the yield prohibition, taking the view that arrangements in which affiliates or third parties provide yield indirectly may violate the GENIUS Act's prohibition. USDBOND must continuously ensure the compliance basis for its characterization as a security and closely monitor changes in regulatory interpretation.
+The OCC implementation proposal adopts a broad reading of the yield prohibition, taking the view that arrangements in which affiliates or third parties provide yield indirectly may violate the GENIUS Act's prohibition. Stable Assets must continuously ensure the compliance basis for its characterization as a security and closely monitor changes in regulatory interpretation.
 
 In addition, the term "holder" is not defined in the GENIUS Act and the CLARITY Act discussion draft continues to evolve, leaving substantive uncertainty in the regulatory framework. Detailed compliance boundaries appear on the [Compliance](/en/compliance/) page.
 
@@ -33,7 +33,7 @@ BENJI's redemption mechanism is as follows: the holder sends tokens to a burn ad
 
 **$1.00 is a NAV commitment at redemption, not a price guarantee in the secondary market.**
 
-- USDB's secondary market price on decentralized exchanges may **deviate temporarily from $1.00** due to supply and demand.
+- USDA's secondary market price on decentralized exchanges may **deviate temporarily from $1.00** due to supply and demand.
 - Rule 2a-7 permits the fund to take remedial action when the deviation between shadow NAV and amortized cost NAV exceeds **0.5%**, but under extreme market conditions a stable $1.00 net asset value is **not an absolute guarantee**.
 - Remedial actions may include: shortening the average portfolio maturity, realizing gains and losses, withholding dividends, calculating NAV at market value, or, if necessary, **reducing the number of shares outstanding**. These measures affect holders differently.
 - SEC filings state explicitly: "It is possible to lose money by investing in a money market fund that seeks to maintain a stable share price."
@@ -65,17 +65,17 @@ The daily airdrop depends on **coordination between off-chain yield calculation 
 
 - Each airdrop creates new token units whose value may be treated as taxable income.
 - Daily distribution means **365 potential taxable events each year**, significantly increasing filing complexity.
-- USDBOND's tax reporting obligations and holders' filing obligations must be disclosed clearly in the offering documents.
+- Stable Assets's tax reporting obligations and holders' filing obligations must be disclosed clearly in the offering documents.
 
 ## Commercial and Market Risk
 
-**Insufficient liquidity depth**: As a yield-bearing instrument, USDB's token may see far less secondary market trading demand than USDT/USDC — holders are more likely to hold it as a "savings instrument" than as a "medium of exchange," which limits trading volume and liquidity.
+**Insufficient liquidity depth**: As a yield-bearing instrument, USDA's token may see far less secondary market trading demand than USDT/USDC — holders are more likely to hold it as a "savings instrument" than as a "medium of exchange," which limits trading volume and liquidity.
 
-**Falling rates compress the value proposition**: If the Federal Reserve continues to cut rates and Treasury yields fall below 2%, USDB's net yield after the management fee may be only around 1.5%, and its appeal relative to zero-yield stablecoins would decline significantly.
+**Falling rates compress the value proposition**: If the Federal Reserve continues to cut rates and Treasury yields fall below 2%, USDA's net yield after the management fee may be only around 1.5%, and its appeal relative to zero-yield stablecoins would decline significantly.
 
-**Distribution limits on a security token**: USDB's transfers are restricted by securities law and occur only between whitelisted addresses, which limits its access to public liquidity pools on decentralized exchanges and its integration with DeFi protocols that do not perform KYC verification.
+**Distribution limits on a security token**: USDA's transfers are restricted by securities law and occur only between whitelisted addresses, which limits its access to public liquidity pools on decentralized exchanges and its integration with DeFi protocols that do not perform KYC verification.
 
-**The scale threshold of the earnings model**: USDB earns through a management fee; at a 0.15% management fee, generating $10 million in annual revenue requires roughly **$6.7 billion** in assets under management. Its earnings efficiency will be far lower than that of USDT and USDC at early scale.
+**The scale threshold of the earnings model**: USDA earns through a management fee; at a 0.15% management fee, generating $10 million in annual revenue requires roughly **$6.7 billion** in assets under management. Its earnings efficiency will be far lower than that of USDT and USDC at early scale.
 
 ## Risk Factors at a Glance
 
@@ -92,26 +92,26 @@ The daily airdrop depends on **coordination between off-chain yield calculation 
 
 ## Risk Questions
 
-### Q: Can holding USDB result in a loss of principal?
+### Q: Can holding USDA result in a loss of principal?
 
-Yes, it is possible. $1.00 is a NAV commitment at redemption, not a price guarantee in the secondary market. USDB's secondary market price may deviate temporarily from $1.00 due to supply and demand, and under extreme market conditions a stable $1.00 net asset value is not an absolute guarantee. SEC filings state explicitly: "It is possible to lose money by investing in a money market fund that seeks to maintain a stable share price."
+Yes, it is possible. $1.00 is a NAV commitment at redemption, not a price guarantee in the secondary market. USDA's secondary market price may deviate temporarily from $1.00 due to supply and demand, and under extreme market conditions a stable $1.00 net asset value is not an absolute guarantee. SEC filings state explicitly: "It is possible to lose money by investing in a money market fund that seeks to maintain a stable share price."
 
-### Q: What is the biggest risk for USDBOND?
+### Q: What is the biggest risk for Stable Assets?
 
-Regulatory characterization risk. If regulators characterize USDBOND as a "payment stablecoin" rather than a security, the GENIUS Act's yield prohibition would apply directly and the daily airdrop mechanism could be prohibited. The OCC implementation proposal adopts a broad reading of the yield prohibition, effectively closing the "affiliate loophole."
+Regulatory characterization risk. If regulators characterize Stable Assets as a "payment stablecoin" rather than a security, the GENIUS Act's yield prohibition would apply directly and the daily airdrop mechanism could be prohibited. The OCC implementation proposal adopts a broad reading of the yield prohibition, effectively closing the "affiliate loophole."
 
 ### Q: Do the daily airdrops create tax problems?
 
 Yes. In most jurisdictions, daily airdrops may be treated as continuing taxable events — each airdrop creates new token units whose value may be treated as taxable income, producing 365 potential taxable events each year. Holders' filing obligations vary by jurisdiction and should be discussed with a professional tax adviser.
 
-### Q: Can USDB be redeemed at any time?
+### Q: Can USDA be redeemed at any time?
 
 A tokenized fund permits daily redemption, but the underlying Treasuries settle on a T+1 basis. Under market stress, the fund may face a timing gap between redemption pressure and asset liquidation. The Bank for International Settlements (BIS) has identified liquidity mismatch as a principal risk of tokenized money market funds.
 
-### Q: Can USDB be traded on decentralized exchanges?
+### Q: Can USDA be traded on decentralized exchanges?
 
-Only to a very limited extent. As a 1940 Act registered fund share, USDB's transfers are restricted by securities law and occur only between eligible addresses that have completed KYC/AML and been whitelisted. This limits its access to public liquidity pools on decentralized exchanges and its integration with DeFi protocols that do not perform KYC verification.
+Only to a very limited extent. As a 1940 Act registered fund share, USDA's transfers are restricted by securities law and occur only between eligible addresses that have completed KYC/AML and been whitelisted. This limits its access to public liquidity pools on decentralized exchanges and its integration with DeFi protocols that do not perform KYC verification.
 
 ## Disclaimer
 
-This whitepaper is provided for informational purposes only and does not constitute an offer to sell securities or investment advice. The offer and sale of USDB shares are subject to applicable securities laws and regulations. Prospective investors should read the offering documents carefully and consult professional advisers before making any investment decision.
+This whitepaper is provided for informational purposes only and does not constitute an offer to sell securities or investment advice. The offer and sale of USDA shares are subject to applicable securities laws and regulations. Prospective investors should read the offering documents carefully and consult professional advisers before making any investment decision.

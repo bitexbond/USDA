@@ -98,5 +98,5 @@ server.on('error', (err) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`\n  USDBOND 预览：http://${HOST}:${PORT}/\n  语言网关 → /zh/ 或 /en/\n`);
+  console.log(`\n  Stable Assets 预览：http://${HOST}:${PORT}/\n  语言网关 → /zh/ 或 /en/\n`);
 });
